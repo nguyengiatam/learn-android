@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_vt_50"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <View
+        android:id="@+id/v_01"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/gl_vt_50"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="#957683"/>
+
+    <View
+        android:id="@+id/v_02"
+        app:layout_constraintTop_toBottomOf="@id/v_01"
+        app:layout_constraintLeft_toRightOf="@id/gl_vt_50"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:background="#874326"/>
+
+    <View
+        android:id="@+id/v_03"
+        app:layout_constraintTop_toBottomOf="@id/v_02"
+        app:layout_constraintRight_toLeftOf="@id/gl_vt_50"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="#565676"/>
+
+    <View
+        android:id="@+id/v_04"
+        app:layout_constraintBottom_toBottomOf="@id/v_03"
+        app:layout_constraintLeft_toRightOf="@id/gl_vt_50"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:background="#874326"/>
+
+    <View
+        android:id="@+id/v_05"
+        app:layout_constraintTop_toBottomOf="@id/v_03"
+        app:layout_constraintRight_toLeftOf="@id/gl_vt_50"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="#468676"/>
+
+    <View
+        android:id="@+id/v_06"
+        app:layout_constraintBottom_toBottomOf="@id/v_05"
+        app:layout_constraintLeft_toRightOf="@id/gl_vt_50"
+        app:layout_constraintTop_toBottomOf="@id/v_04"
+        android:layout_width="140dp"
+        android:layout_height="0dp"
+        android:background="#274386"/>
+
+    <View
+        android:id="@+id/v_07"
+        app:layout_constraintTop_toBottomOf="@id/v_05"
+        app:layout_constraintRight_toRightOf="@+id/v_06"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#062116"/>
+
+    <View
+        app:layout_constraintLeft_toRightOf="@id/v_07"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/v_07"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:background="#8BC34A"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

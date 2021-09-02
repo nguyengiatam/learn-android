@@ -31,6 +31,7 @@
         android:id="@+id/edt_pass"
         style="@style/style_edt_sign_up"
         android:hint="Password"
+        android:inputType="textPassword"
         app:layout_constraintRight_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edt_user" />
@@ -39,6 +40,7 @@
         android:id="@+id/edt_re_pass"
         android:hint="Enter the password"
         style="@style/style_edt_sign_up"
+        android:inputType="textPassword"
         app:layout_constraintRight_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edt_pass" />

@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if (check){
-            Toast.makeText(this,"Đăng ký thành công",Toast.LENGTH_SHORT).show();
+        if (!String.valueOf(user.getText()).equals("") && !String.valueOf(pass.getText()).equals("") && !String.valueOf(pass.getText()).equals("") && approve()) {
+            Toast.makeText(this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -45,9 +45,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onFocusChange(View v, boolean hasFocus) {
         if (!hasFocus) {
             checkInputValue(v);
-            if (approve()){
-                check = true;
-            }
         }
     }
 
@@ -56,27 +53,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.edt_user:
                 p = Pattern.compile("^[a-zA-Z0-9]{6,15}$");
-                if (!p.matcher(String.valueOf(user.getText())).find()) {
+                if (!p.matcher(String.valueOf(user.getText())).matches()) {
                     msgUser.setText("Username sai định dạng yêu cầu");
                 } else {
                     msgUser.setText("");
                 }
                 break;
             case R.id.edt_pass:
-                p = Pattern.compile("((?=.[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,20})");
-                if (!p.matcher(String.valueOf(pass.getText())).find()) {
+                p = Pattern.compile("((?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{6,20})");
+                if (!p.matcher(String.valueOf(pass.getText())).matches()) {
                     msgPass.setText("Password sai định dạng yêu cầu");
                 } else {
                     msgPass.setText("");
                 }
                 break;
-            case R.id.txt_msg_re_pass:
-                if (msgPass.getText() != msgRePass.getText()) {
-                    msgRePass.setText("Nhập lại không đúng mật khẩu");
-                } else {
-                    msgRePass.setText("");
-                }
-                break;
+        }
+
+        if (!String.valueOf(re_pass.getText()).equals("") && !String.valueOf(pass.getText()).equals(String.valueOf(re_pass.getText()))) {
+            msgRePass.setText("Nhập lại không đúng mật khẩu");
+        } else {
+            msgRePass.setText("");
         }
     }
 

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/edt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhập thông tin cá nhân"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"/>
+
+    <EditText
+        android:id="@+id/edt_phone"
+        style="@style/style_pass"
+        android:hint="Phone number"
+        app:layout_constraintTop_toBottomOf="@+id/edt_title"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText
+        android:id="@+id/edt_email"
+        style="@style/style_pass"
+        android:layout_height="48dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_phone" />
+
+    <EditText
+        android:id="@+id/edt_full_name"
+        style="@style/style_pass"
+        android:hint="Full name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
+    <EditText
+        android:id="@+id/edt_agency"
+        style="@style/style_pass"
+        android:hint="Work agency name"
+        app:layout_constraintTop_toBottomOf="@+id/edt_full_name"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText
+        android:id="@+id/edt_password"
+        style="@style/style_pass"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/edt_agency"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/bt_input"
+        style="@style/button_radius_15"
+        android:text="Tiếp tục"
+        app:layout_constraintTop_toBottomOf="@id/edt_password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+        android:id="@+id/check_mail"
+        style="@style/icon_check"
+        app:layout_constraintRight_toRightOf="@id/edt_email"
+        app:layout_constraintTop_toTopOf="@id/edt_email"
+        app:layout_constraintBottom_toBottomOf="@id/edt_email"/>
+
+    <ImageView
+        android:id="@+id/check_name"
+        style="@style/icon_check"
+        app:layout_constraintRight_toRightOf="@id/edt_full_name"
+        app:layout_constraintTop_toTopOf="@id/edt_full_name"
+        app:layout_constraintBottom_toBottomOf="@id/edt_full_name"/>
+
+    <ImageView
+        android:id="@+id/check_agency"
+        style="@style/icon_check"
+        app:layout_constraintRight_toRightOf="@id/edt_agency"
+        app:layout_constraintTop_toTopOf="@id/edt_agency"
+        app:layout_constraintBottom_toBottomOf="@id/edt_agency"/>
+
+    <ImageView
+        android:id="@+id/check_password"
+        style="@style/icon_check"
+        app:layout_constraintRight_toRightOf="@id/edt_password"
+        app:layout_constraintTop_toTopOf="@id/edt_password"
+        app:layout_constraintBottom_toBottomOf="@id/edt_password"/>
+
+    <ImageView
+        android:id="@+id/check_phone"
+        style="@style/icon_check"
+        app:layout_constraintRight_toRightOf="@id/edt_phone"
+        app:layout_constraintTop_toTopOf="@id/edt_phone"
+        app:layout_constraintBottom_toBottomOf="@id/edt_phone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

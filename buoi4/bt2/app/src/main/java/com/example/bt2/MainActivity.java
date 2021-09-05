@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bt_division:
             case R.id.bt_remainder:
                 if (String.valueOf(last_operator.getText()).equals(".")) {
-                    Toast.makeText(this, "Sai định dạng", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Định dạng không hợp lệ", Toast.LENGTH_SHORT).show();
                 } else if (String.valueOf(first_operator.getText()).equals("") && !String.valueOf(last_operator.getText()).contains("√")) {
                     if (!String.valueOf(last_operator.getText()).equals("") ) {
                         firstValue = Double.parseDouble(String.valueOf(last_operator.getText()));
@@ -63,15 +63,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 setValueAfterCalculation(v);
                 break;
             case R.id.bt_result:
-                if (String.valueOf(last_operator.getText()).equals(".")) {
-                    Toast.makeText(this, "Sai định dạng", Toast.LENGTH_SHORT).show();
-                } else if (!String.valueOf(first_operator.getText()).equals("") || String.valueOf(last_operator.getText()).contains("√")) {
-                    calculate(v);
-                    setValueAfterCalculation(v);
-                } else {
+                if (String.valueOf(last_operator.getText()).equals(".") || String.valueOf(last_operator.getText()).contains("√") && !String.valueOf(last_operator.getText()).matches("^√.+$")) {
+                    Toast.makeText(this, "Định dạng không hợp lệ", Toast.LENGTH_SHORT).show();
                     break;
                 }
-                checkResult = true;
+                if (String.valueOf(last_operator.getText()).equals("")){
+                    Toast.makeText(this, "Hãy nhập toán tử", Toast.LENGTH_SHORT).show();
+                    break;
+                }
+                if (!String.valueOf(first_operator.getText()).equals("")) {
+                    calculate(v);
+                    setValueAfterCalculation(v);
+                    checkResult = true;
+                }
                 break;
             case R.id.bt_clear:
                 if (!String.valueOf(last_operator.getText()).equals("")) {
@@ -87,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (String.valueOf(last_operator.getText()).equals("")) {
                     last_operator.setText("√");
                 } else {
-                    Toast.makeText(this, "Sai định dạng", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Định dạng không hợp lệ", Toast.LENGTH_SHORT).show();
                 }
         }
     }

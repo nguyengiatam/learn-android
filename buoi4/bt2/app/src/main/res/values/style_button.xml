@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@drawable/border_30dp</item>
+        <item name="backgroundTint">#689348</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">35sp</item>
+    </style>
+</resources>

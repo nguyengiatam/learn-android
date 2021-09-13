@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/menu_rename" android:title="Đổi tên file"/>
-    <item android:id="@+id/menu_delete" android:title="Xóa file"/>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/change_layout"
+        android:icon="@drawable/ic_baseline_apps_24"
+        android:title="change"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/search_file"
+        android:title="search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="ifRoom"/>
 </menu>

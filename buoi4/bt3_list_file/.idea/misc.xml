@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/learn-android/buoi4/bt3_list_file/app/src/main/res/drawable/radius_15.xml" value="0.11036036036036036" />
         <entry key="..\:/learn-android/buoi4/bt3_list_file/app/src/main/res/layout-v28/file_item.xml" value="0.264" />
         <entry key="..\:/learn-android/buoi4/bt3_list_file/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/learn-android/buoi4/bt3_list_file/app/src/main/res/layout/file_item.xml" value="0.536" />
+        <entry key="..\:/learn-android/buoi4/bt3_list_file/app/src/main/res/layout/menu_item.xml" value="0.4" />
+        <entry key="..\:/learn-android/buoi4/bt3_list_file/app/src/main/res/layout/rename_item_dialog.xml" value="0.536" />
         <entry key="..\:/learn-android/buoi4/bt3_list_file/app/src/main/res/menu/menu.xml" value="0.21981981981981982" />
       </map>
     </option>

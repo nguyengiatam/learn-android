@@ -7,8 +7,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.cardview.widget.CardView;
-
 import java.util.ArrayList;
 
 public class ListGroupAdapter extends BaseAdapter {

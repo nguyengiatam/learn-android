@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="input_name_folder">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:hint">Nhập tên thư mục</item>
+        <item name="android:background">@drawable/radius_15dp</item>
+    </style>
+</resources>

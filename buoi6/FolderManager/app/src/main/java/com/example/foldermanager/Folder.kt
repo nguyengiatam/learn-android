@@ -1,4 +1,6 @@
 package com.example.foldermanager
 
-class Folder(var name: String, var description : String) {
+import java.io.Serializable
+
+class Folder(var id : Int ,var name: String, var description : String): Serializable {
 }

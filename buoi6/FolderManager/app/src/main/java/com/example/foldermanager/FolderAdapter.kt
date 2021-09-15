@@ -4,14 +4,15 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.list_folder.view.*
 
 class FolderAdapter(var context: Context, var list: MutableList<Folder>) : RecyclerView.Adapter<FolderAdapter.MyViewHolder>() {
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val nameFolder = itemView.folder_name
-        val descriptionFolder = itemView.folder_description
+        val nameFolder: TextView = itemView.folder_name
+        val descriptionFolder: TextView = itemView.folder_description
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

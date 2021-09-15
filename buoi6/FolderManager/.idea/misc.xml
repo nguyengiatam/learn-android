@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/learn-android/buoi6/FolderManager/app/src/main/res/drawable/radius_15dp.xml" value="0.2703125" />
         <entry key="..\:/learn-android/buoi6/FolderManager/app/src/main/res/layouts/activity/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/learn-android/buoi6/FolderManager/app/src/main/res/layouts/activity/layout/edit_folder.xml" value="0.25416666666666665" />
         <entry key="..\:/learn-android/buoi6/FolderManager/app/src/main/res/layouts/activity/layout/main.xml" value="0.264" />
         <entry key="..\:/learn-android/buoi6/FolderManager/app/src/main/res/layouts/activity/layout/new_folder.xml" value="0.25416666666666665" />
         <entry key="..\:/learn-android/buoi6/FolderManager/app/src/main/res/layouts/recyclerview/layout/list_folder.xml" value="0.536" />
+        <entry key="..\:/learn-android/buoi6/FolderManager/app/src/main/res/menu/create_folder_menu.xml" value="0.4" />
         <entry key="..\:/learn-android/buoi6/FolderManager/app/src/main/res/menu/main_menu.xml" value="0.25416666666666665" />
       </map>
     </option>

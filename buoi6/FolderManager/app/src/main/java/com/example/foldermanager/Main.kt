@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.main.*
 
 class Main : AppCompatActivity() {
     lateinit var adapter : FolderAdapter
     var listFolder = mutableListOf<Folder>()
+    val data = ProgramData(this, "folder")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +30,7 @@ class Main : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.new_folder_main -> {
-                val addNewFolder = Intent(this, NewFolder::class.java)
+                var addNewFolder = Intent(this, NewFolder::class.java)
                 startActivity(addNewFolder)
             }
         }
@@ -37,18 +39,7 @@ class Main : AppCompatActivity() {
 
     private fun setToolbar() {
         setSupportActionBar(main_toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
-    }
-
-    private fun setDataListFolder(){
-        listFolder.add(Folder("Tổng hợp tin tức thời sự","Tổng hợp tin tức thời sự nóng hổi nhất, của tất cả các báo nổi nhất hiện nay"))
-        listFolder.add(Folder("Do It Your Self","Sơn Tùng MTP quá đẹp trai hát hay"))
-        listFolder.add(Folder("Cảm hứng sáng tạo","Tổng hợp tin tức thời sự nóng hổi nhất, của tất cả các báo nổi nhất hiện nay"))
-        listFolder.add(Folder("Tổng hợp tin tức thời sự","Tổng hợp tin tức thời sự nóng hổi nhất, của tất cả các báo nổi nhất hiện nay"))
-        listFolder.add(Folder("Do It Your Self","Tổng hợp tin tức thời sự nóng hổi nhất, của tất cả các báo nổi nhất hiện nay"))
-        listFolder.add(Folder("Cảm hứng sáng tạo","Tổng hợp tin tức thời sự nóng hổi nhất, của tất cả các báo nổi nhất hiện nay"))
-        listFolder.add(Folder("Tổng hợp tin tức thời sự","Tổng hợp tin tức thời sự nóng hổi nhất, của tất cả các báo nổi nhất hiện nay"))
     }
 
     private fun setRcvFolder(){
@@ -57,8 +48,8 @@ class Main : AppCompatActivity() {
         rcv_main_folder.layoutManager = GridLayoutManager(this,1)
     }
 
-    private fun setChangeLayout(){
-
+    private fun setDataListFolder(){
+        listFolder = data.getAll()
     }
 
 }

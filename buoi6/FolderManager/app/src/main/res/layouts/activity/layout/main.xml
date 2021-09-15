@@ -19,7 +19,7 @@
             android:layout_gravity="center_horizontal"
             android:text="Quản lý thư mục"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </androidx.appcompat.widget.Toolbar>

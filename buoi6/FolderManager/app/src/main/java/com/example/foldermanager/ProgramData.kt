@@ -32,11 +32,11 @@ class ProgramData(context: Context, tableName: String) :
         return listFolder
     }
 
-    public fun getObjectById(id: Int): Folder{
+    public fun getObjectById(id: Int): Folder {
         val db = readableDatabase
         val cursor = db.rawQuery("SELECT * FROM $tableName WHERE id = ?", arrayOf(id.toString()))
         cursor.moveToFirst()
-        var folder = Folder(cursor.getInt(0),cursor.getString(1),cursor.getString(2))
+        var folder = Folder(cursor.getInt(0), cursor.getString(1), cursor.getString(2))
         cursor.close()
         return folder
     }

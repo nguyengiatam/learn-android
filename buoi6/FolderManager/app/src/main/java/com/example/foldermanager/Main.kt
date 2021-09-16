@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.main.*
 
 class Main : AppCompatActivity() {
-    lateinit var adapter : FolderAdapter
+    lateinit var adapter: FolderAdapter
     var listFolder = mutableListOf<Folder>()
     val data = ProgramData(this, "folder")
 
@@ -27,7 +27,7 @@ class Main : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
+        when (item.itemId) {
             R.id.new_folder_main -> {
                 var addNewFolder = Intent(this, NewFolder::class.java)
                 startActivity(addNewFolder)
@@ -41,13 +41,13 @@ class Main : AppCompatActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
     }
 
-    private fun setRcvFolder(){
-        adapter = FolderAdapter(this,listFolder)
+    private fun setRcvFolder() {
+        adapter = FolderAdapter(this, listFolder)
         rcv_main_folder.adapter = adapter
-        rcv_main_folder.layoutManager = GridLayoutManager(this,1)
+        rcv_main_folder.layoutManager = GridLayoutManager(this, 1)
     }
 
-    private fun setDataListFolder(){
+    private fun setDataListFolder() {
         listFolder = data.getAll()
     }
 

@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.folder_information.*
 
 class EditFolder : AppCompatActivity() {
-    var id : Int = 0
-    private val data = ProgramData(this,"folder")
+    var id: Int = 0
+    private val data = ProgramData(this, "folder")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.folder_information)
@@ -23,8 +23,8 @@ class EditFolder : AppCompatActivity() {
         title_toolbar_folder.setText("Chỉnh sửa")
     }
 
-    private fun setValue(){
-        id = intent.getIntExtra("id",1)
+    private fun setValue() {
+        id = intent.getIntExtra("id", 1)
         val folder = data.getObjectById(id)
         name_folder.setText(folder.name)
         description_folder.setText(folder.description)
@@ -37,7 +37,11 @@ class EditFolder : AppCompatActivity() {
             if (name_folder.text.toString().trim().equals("")) {
                 Toast.makeText(this, "Tên thư mục không được để trống", Toast.LENGTH_SHORT).show()
             } else {
-                data.updateFolder(name_folder.text.toString(),description_folder.text.toString(),id)
+                data.updateFolder(
+                    name_folder.text.toString(),
+                    description_folder.text.toString(),
+                    id
+                )
                 startActivity(moveToMain)
             }
         }

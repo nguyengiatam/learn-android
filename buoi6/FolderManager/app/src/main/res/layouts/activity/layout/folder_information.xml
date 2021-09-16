@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_vtc_50"
@@ -16,53 +16,54 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:gravity="center_horizontal"
-        app:layout_constraintVertical_weight="1"
+        app:layout_constraintBottom_toTopOf="@id/name_folder"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/name_folder">
+        app:layout_constraintVertical_weight="1">
+
         <TextView
             android:id="@+id/title_toolbar_folder"
-            android:layout_gravity="center_horizontal"
-            android:textStyle="bold"
-            android:textSize="24sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/back_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:textStyle="normal"
-            android:textSize="20sp"
             android:text="Hủy"
             android:textColor="#03A9F4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:textSize="20sp"
+            android:textStyle="normal" />
 
         <TextView
             android:id="@+id/save_folder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:textStyle="normal"
-            android:textSize="20sp"
+            android:layout_marginEnd="10dp"
             android:text="Lưu"
             android:textColor="#03A9F4"
-            android:layout_marginEnd="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:textSize="20sp"
+            android:textStyle="normal" />
     </androidx.appcompat.widget.Toolbar>
 
     <EditText
         android:id="@+id/name_folder"
         style="@style/input_name_folder"
         android:background="@drawable/radius_15dp"
-        app:layout_constraintVertical_weight="1"
+        app:layout_constraintBottom_toTopOf="@id/description_folder"
         app:layout_constraintTop_toBottomOf="@+id/folder_toolbar"
-        app:layout_constraintBottom_toTopOf="@id/description_folder"/>
+        app:layout_constraintVertical_weight="1" />
 
     <EditText
         android:id="@+id/description_folder"
         style="@style/input_description_folder"
-        app:layout_constraintVertical_weight="4"
+        app:layout_constraintBottom_toBottomOf="@id/gl_vtc_50"
         app:layout_constraintTop_toBottomOf="@id/name_folder"
-        app:layout_constraintBottom_toBottomOf="@id/gl_vtc_50"/>
+        app:layout_constraintVertical_weight="4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

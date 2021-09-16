@@ -32,11 +32,20 @@ class ProgramData(context: Context, tableName: String) :
         return listFolder
     }
 
-    public fun updateFolder(folder: Folder) {
+    public fun getObjectById(id: Int): Folder{
+        val db = readableDatabase
+        val cursor = db.rawQuery("SELECT * FROM $tableName WHERE id = ?", arrayOf(id.toString()))
+        cursor.moveToFirst()
+        var folder = Folder(cursor.getInt(0),cursor.getString(1),cursor.getString(2))
+        cursor.close()
+        return folder
+    }
+
+    public fun updateFolder(name: String, description: String, id: Int) {
         var db = writableDatabase
         db.execSQL(
             "UPDATE $tableName SET name = ?, description = ? where id = ?",
-            arrayOf(folder.name, folder.description, folder.id.toString())
+            arrayOf(name, description, id.toString())
         )
     }
 
@@ -48,9 +57,9 @@ class ProgramData(context: Context, tableName: String) :
         )
     }
 
-    public fun deleteFolder(folder: Folder) {
+    public fun deleteFolder(id: Int) {
         val db = writableDatabase
-        db.execSQL("DELETE FROM $tableName WHERE id = ?", arrayOf(folder.id.toString()))
+        db.execSQL("DELETE FROM $tableName WHERE id = ?", arrayOf(id.toString()))
     }
 
     public fun getCount(): Int {
